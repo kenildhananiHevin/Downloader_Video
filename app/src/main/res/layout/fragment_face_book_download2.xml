@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.howtodownload.FaceBookHowToDownloadFragment">
+
+    <ImageView
+        android:id="@+id/fb_how_to_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fb_how_to"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/fb_how_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/insta_how_to"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:visibility="gone"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fb_how_to_image"
+        android:text="@string/next"
+        android:background="@drawable/how_to_text_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"/>
+
+    <TextView
+        android:id="@+id/got_it"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fb_how_to"
+        android:text="@string/got_it"
+        android:background="@drawable/how_to_text_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
