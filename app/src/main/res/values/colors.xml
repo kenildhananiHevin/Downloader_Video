@@ -18,6 +18,7 @@
     <color name="txt_color">#9F9F9F</color>
     <color name="private_color">#B4B4B4</color>
     <color name="ic_launcher_background">#F42410</color>
+    <color name="ad_native_background">#FFFFFF</color>
 
 
 </resources>

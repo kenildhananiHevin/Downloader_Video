@@ -13,8 +13,8 @@
         android:text="@string/don_t_want_to_download_media_nfrom_private_account"
         android:textColor="@color/black"
         android:textSize="@dimen/_13sdp"
-        android:layout_marginStart="@dimen/_7sdp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:fontFamily="@font/poppins_medium"/>
 

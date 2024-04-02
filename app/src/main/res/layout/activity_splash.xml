@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_bg"
-    tools:context=".splash.SplashActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.splash.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg"/>
 
     <ImageView
         android:id="@+id/logo_image"
@@ -54,5 +58,15 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_action_might_contain_ads"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@id/animation_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_13sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,7 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:overScrollMode="never"
+        android:layout_above="@id/native_ad_container"
         android:visibility="gone"
         android:layout_below="@id/toolbar"/>
 
@@ -59,5 +60,14 @@
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/language_bg"
         android:layout_centerInParent="true"/>
+
+    <include
+        android:id="@+id/native_ad_container"
+        layout="@layout/ad_layout_native_medium"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/medium_native_ad_height" />
+
 
 </RelativeLayout>

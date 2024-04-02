@@ -2,9 +2,9 @@
     <string name="app_name">Загрузчик видео</string>
     <string name="all_video_downloader">Все загрузчики видео</string>
     <string name="video_downloader">Загрузчик \nвидео</string>
-    <string name="instagram">Инстаграм</string>
-    <string name="facebook">Фейсбук</string>
-    <string name="whatsapp">Хартсап</string>
+    <string name="instagram">Энстаграм</string>
+    <string name="facebook">Фэйсбук</string>
+    <string name="whatsapp">Ватсап</string>
     <string name="twitter">Твиттер</string>
     <string name="whatsapp_status">Статус Хартсап</string>
     <string name="allow_permission">Разрешить разрешение</string>
@@ -25,7 +25,7 @@
     <string name="more_tools">Дополнительные инструменты</string>
     <string name="dp_creatar">Создатель DP</string>
     <string name="hashtag">Хэштег</string>
-    <string name="insta_story">История Инста</string>
+    <string name="insta_story">Инста Стори</string>
     <string name="my_download">Моя загрузка</string>
     <string name="share_app">Поделиться приложением</string>
     <string name="download">Скачать</string>
@@ -107,7 +107,7 @@
     <string name="got_it">Понял</string>
     <string name="setting">Настройки</string>
     <string name="click_here">Нажмите здесь</string>
-    <string name="rate_or_app">Оценить или приложение</string>
+    <string name="rate_or_app">Оцените наше приложение</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
     <string name="share_with_friends">Поделиться с друзьями</string>
     <string name="save">Сохранить</string>
@@ -118,17 +118,25 @@
     <string name="select_hashtag">Выберите хэштег</string>
     <string name="paste_video_link_here">Вставьте ссылку на видео здесь...</string>
     <string name="paste_link">Вставить ссылку</string>
-    <string name="don_t_want_to_download_media_nfrom_private_account">Не хотите скачивать медиа \nиз закрытого аккаунта?</string>
+    <string name="don_t_want_to_download_media_nfrom_private_account">Не хотите скачивать медиа из закрытого аккаунта ?</string>
     <string name="delete_video">Удалить видео</string>
-    <string name="are_you_sure_you_want_to_delete_n_this_video">Вы уверены, что хотите удалить \nэто видео?</string>
-    <string name="instagram_story">История Instagram</string>
+    <string name="are_you_sure_you_want_to_delete_n_this_video">Вы уверены, что хотите удалить это видео ?</string>
+    <string name="instagram_story">История Инстаграм</string>
     <string name="there_need_to_enable_the_storage_in_order_nto_use_this_whatsapp">Необходимо включить хранилище, чтобы использовать этот WhatsApp.</string>
     <string name="all_in_one_video_downloader">Все в одном загрузчике видео</string>
-    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">Загрузчик видео автоматически обнаруживает видео, вы можете загрузить их всего одним щелчком.</string>
+    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">Скачивайте видео одним щелчком.</string>
     <string name="app_not_available">Приложение недоступно</string>
     <string name="open_instagram">Открыть Инстаграм</string>
     <string name="we_redirect_you_on_application">Мы перенаправим вас в приложение!</string>
     <string name="open_facebook">Открыть Фейсбук</string>
-
+    <string name="downloads">Загрузки</string>
+    <string name="please_turn_on_internet_connection">Пожалуйста, включите подключение к Интернету</string>
+    <string name="share">Поделиться</string>
+    <string name="selected_image">Выберите изображение</string>
+    <string name="delete_image">Удалить изображение</string>
+    <string name="are_you_sure_you_want_to_delete_this_image">Вы уверены, что хотите удалить это изображение ?</string>
+    <string name="retry_network">Повторить сеть</string>
+    <string name="this_action_might_contain_ads">Это действие может содержать рекламу</string>
+    <string name="loading_ads">Загрузка рекламы...</string>
 
 </resources>

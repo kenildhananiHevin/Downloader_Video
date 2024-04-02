@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.facebook.FaceBookDownloadFragment">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.facebook.FaceBookDownloadFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSingleVideolist"
@@ -30,7 +30,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="@dimen/_150sdp"
+            android:layout_width="@dimen/_130sdp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/no_data"

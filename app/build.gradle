@@ -3,25 +3,32 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'io.michaelrocks.paranoid'
 }
 
 android {
-    namespace 'com.cashloan.myapplication.downloader_video'
+    namespace 'vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.cashloan.myapplication.downloader_video"
+        applicationId "vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        release {
+        debug {
+            debuggable true
             minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,6 +37,11 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    
     bundle{
         language{
             enableSplit = false
@@ -38,6 +50,8 @@ android {
 }
 
 dependencies {
+
+    implementation project(':ad-sdk')
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'

@@ -107,7 +107,7 @@
     <string name="got_it">समझ गया</string>
     <string name="setting">सेटिंग</string>
     <string name="click_here">यहाँ क्लिक करें</string>
-    <string name="rate_or_app">रेट या ऐप</string>
+    <string name="rate_or_app">हमारे ऐप को रेट करें</string>
     <string name="privacy_policy">गोपनीयता नीति</string>
     <string name="share_with_friends">दोस्तों के साथ साझा करें</string>
     <string name="save">बचाना</string>
@@ -118,17 +118,26 @@
     <string name="select_hashtag">हैशटैग चुनें</string>
     <string name="paste_video_link_here">वीडियो लिंक यहाँ पेस्ट करें...</string>
     <string name="paste_link">लिंक पेस्ट करें</string>
-    <string name="don_t_want_to_download_media_nfrom_private_account">क्या आप निजी खाते से मीडिया नहीं \nडाउनलोड करना चाहते हैं?</string>
+    <string name="don_t_want_to_download_media_nfrom_private_account">क्या आप निजी खाते से मीडिया नहीं डाउनलोड करना चाहते हैं ?</string>
     <string name="delete_video">वीडियो हटाएं</string>
-    <string name="are_you_sure_you_want_to_delete_n_this_video">क्या आप निश्चित हैं कि आप इस वीडियो को \nहटाना चाहते हैं?</string>
+    <string name="are_you_sure_you_want_to_delete_n_this_video">क्या आप निश्चित हैं कि आप इस वीडियो को हटाना चाहते हैं ?</string>
     <string name="instagram_story">इंस्टाग्राम कहानी</string>
     <string name="there_need_to_enable_the_storage_in_order_nto_use_this_whatsapp">इस व्हाट्सएप का उपयोग करने के लिए भंडारण को सक्षम करना आवश्यक है।</string>
     <string name="all_in_one_video_downloader">सभी एक में वीडियो डाउनलोडर</string>
-    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">वीडियो डाउनलोडर स्वचालित रूप से वीडियो का पता लगाता है, आप उन्हें एक ही क्लिक में डाउनलोड कर सकते हैं।</string>
+    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">बस एक क्लिक में वीडियो डाउनलोड करें.</string>
     <string name='app_not_available'>ऐप उपलब्ध नहीं है</string>
     <string name='open_instagram'>इंस्टाग्राम खोलें</string>
     <string name='we_redirect_you_on_application'>हम आपको एप्लिकेशन पर रीडायरेक्ट करते हैं!</string>
     <string name='open_facebook'>फेसबुक खोलें</string>
+    <string name="downloads">डाउनलोड</string>
+    <string name="please_turn_on_internet_connection">कृपया इंटरनेट कनेक्शन चालू करें</string>
+    <string name="share">शेयर</string>
+    <string name="selected_image">चयनित छवि</string>
+    <string name="delete_image">चित्र हटाएं</string>
+    <string name="are_you_sure_you_want_to_delete_this_image">क्या आप इस चित्र को हटाना चाहते हैं ?</string>
+    <string name="retry_network">नेटवर्क को पुनः प्रयास करें</string>
+    <string name="this_action_might_contain_ads">यह क्रिया विज्ञापन शामिल कर सकती है</string>
+    <string name="loading_ads">विज्ञापन लोड हो रहे हैं...</string>
 
 
 </resources>

@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/all_bg"
-    tools:context=".hastag.HashtagShowActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.hastag.HashtagShowActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="@dimen/_7sdp"
-        android:gravity="center_vertical"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -31,23 +31,24 @@
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_weight="1"
-            android:fontFamily="@font/poppins_semibold"
             android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_semibold"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
             android:text="@string/hashtag_for_instagram"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp" />
-        
+
         <CheckBox
             android:id="@+id/un_select"
             android:layout_width="@dimen/_18sdp"
             android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:adjustViewBounds="true"
-            android:checked="false"
-            android:button="@null"
             android:background="@drawable/checkbox_selectedunselected"
-            android:layout_marginEnd="@dimen/_10sdp" />
+            android:button="@null"
+            android:checked="false"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -55,47 +56,132 @@
         android:id="@+id/hash_recycle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
-        tools:listitem="@layout/hashtag_show_item"
-        app:layout_constraintTop_toBottomOf="@id/tab_layout"
-        app:layout_constraintBottom_toTopOf="@id/copy_click"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_7sdp"
         android:layout_marginBottom="@dimen/_15sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp"/>
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bottom_layout"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:spanCount="3"
+        tools:listitem="@layout/hashtag_show_item" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/language_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
-        android:id="@+id/copy_click"
+        android:id="@+id/bottom_layout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/how_to_text_bg"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/hash_copy" />
+        <LinearLayout
+            android:id="@+id/copy_click"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/how_to_text_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/copy_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_7sdp"
-            android:ellipsize="marquee"
-            android:fontFamily="@font/poppins_medium"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:singleLine="true"
-            android:text="@string/copy_hashtag"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_13sdp" />
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/hash_copy" />
+
+            <TextView
+                android:id="@+id/copy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/poppins_medium"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/copy_hashtag"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_click"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/how_to_text_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/has_share" />
+
+            <TextView
+                android:id="@+id/share_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/poppins_medium"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/retery_network"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/wifi" />
+
+        <TextView
+            android:id="@+id/network_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/retry_network"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

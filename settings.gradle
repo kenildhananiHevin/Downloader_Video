@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Downloader_Video"
 include ':app'
+include ':ad-sdk'

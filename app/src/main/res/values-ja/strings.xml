@@ -2,7 +2,7 @@
     <string name="app_name">ビデオダウンローダー</string>
     <string name="all_video_downloader">オールビデオダウンローダー</string>
     <string name="video_downloader">ビデオダウン \nローダー</string>
-    <string name="instagram">インスタグラム</string>
+    <string name="instagram">エンスタグラム</string>
     <string name="facebook">フェイスブック</string>
     <string name="whatsapp">ワッツアップ</string>
     <string name="twitter">ツイッター</string>
@@ -25,7 +25,7 @@
     <string name="more_tools">その他のツール</string>
     <string name="dp_creatar">DP クリエイター</string>
     <string name="hashtag">ハッシュタグ</string>
-    <string name="insta_story">インスタストーリー</string>
+    <string name="insta_story">インスタ ストーリー</string>
     <string name="my_download">私のダウンロード</string>
     <string name="share_app">アプリを共有</string>
     <string name="download">ダウンロード</string>
@@ -107,7 +107,7 @@
     <string name="got_it">了解しました</string>
     <string name="setting">設定</string>
     <string name="click_here">ここをクリック</string>
-    <string name="rate_or_app">評価またはアプリ</string>
+    <string name="rate_or_app">アプリを評価してください</string>
     <string name="privacy_policy">プライバシーポリシー</string>
     <string name="share_with_friends">友達と共有</string>
     <string name="save">保存</string>
@@ -118,16 +118,25 @@
     <string name="select_hashtag">ハッシュタグを選択</string>
     <string name="paste_video_link_here">動画リンクをここに貼り付ける...</string>
     <string name="paste_link">リンクを貼り付ける</string>
-    <string name="don_t_want_to_download_media_nfrom_private_account">非公開アカウントからメディアを\nダウンロードしたくありませんか？</string>
+    <string name="don_t_want_to_download_media_nfrom_private_account">非公開アカウントからメディアをダウンロードしたくありませんか ？</string>
     <string name="delete_video">ビデオを削除</string>
-    <string name="are_you_sure_you_want_to_delete_n_this_video">このビデオを削除してもよろしいですか？</string>
-    <string name="instagram_story">Instagramストーリー</string>
+    <string name="are_you_sure_you_want_to_delete_n_this_video">このビデオを削除してもよろしいですか ？</string>
+    <string name="instagram_story">インスタグラムストーリー</string>
     <string name="there_need_to_enable_the_storage_in_order_nto_use_this_whatsapp">このWhatsAppを使用するには、ストレージを有効にする必要があります。</string>
     <string name="all_in_one_video_downloader">オールインワンビデオダウンローダー</string>
-    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">ビデオダウンローダーはビデオを自動的に検出し、1クリックでダウンロードできます。</string>
+    <string name="video_downloader_auto_detects_videos_you_ncan_download_them_with_just_one_click">たった1回のクリックでビデオをダウンロード.</string>
     <string name="app_not_available">アプリは利用できません</string>
     <string name="open_instagram">インスタグラム を開く</string>
     <string name="we_redirect_you_on_application">アプリケーションでリダイレクトします !</string>
     <string name="open_facebook">フェイスブック を開く</string>
+    <string name="downloads">ダウンロード</string>
+    <string name="please_turn_on_internet_connection">インターネット接続をオンにしてください</string>
+    <string name="share">共有</string>
+    <string name="selected_image">選択した画像</string>
+    <string name="delete_image">画像を削除する</string>
+    <string name="are_you_sure_you_want_to_delete_this_image">この画像を削除してもよろしいですか ？</string>
+    <string name="retry_network">ネットワークを再試行する</string>
+    <string name="this_action_might_contain_ads">この操作には広告が含まれる可能性があります</string>
+    <string name="loading_ads">広告を読み込んでいます...</string>
 
 </resources>

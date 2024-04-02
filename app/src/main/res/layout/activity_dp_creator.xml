@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/all_bg"
-    tools:context=".dpcreator.DpCreatorActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorActivity">
 
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
-            android:text="@string/dp_generator"
+            android:text="@string/dp_creatar"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp" />
 

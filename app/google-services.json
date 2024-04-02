@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621981976825",
+    "project_id": "downloader--wisdom-valley",
+    "storage_bucket": "downloader--wisdom-valley.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621981976825:android:32f4a5e96dd979839ffa28",
+        "android_client_info": {
+          "package_name": "vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC35Y0zbNeNTtIeuV36PG-75jpt2lsZe4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

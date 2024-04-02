@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".howtodownload.HowToDownloadActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.howtodownload.HowToDownloadActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"
@@ -26,7 +26,7 @@
             android:id="@+id/how_to_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/how_to_downloads"
+            android:text="@string/how_to_download"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp"
             android:layout_weight="1"
@@ -58,7 +58,7 @@
         app:tabSelectedTextColor="@color/language_bg"
         app:tabTextColor="@color/black" />
 
-    <com.cashloan.myapplication.downloader_video.model.CustomViewPager
+    <vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.CustomViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

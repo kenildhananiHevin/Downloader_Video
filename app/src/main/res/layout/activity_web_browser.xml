@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".webbrowser.WebBrowserActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"
@@ -43,8 +43,17 @@
         android:id="@+id/web_browser_recycle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/banner_ad_container"
         app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
+
+    <include
+        android:id="@+id/banner_ad_container"
+        layout="@layout/ad_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

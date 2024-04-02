@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/all_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.facebook.FaceBookFragment">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.facebook.FaceBookFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

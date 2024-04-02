@@ -20,5 +20,14 @@
         <domain includeSubdomains="true">ifunny.co</domain>
         <domain includeSubdomains="true">bitchute.com</domain>
         <domain includeSubdomains="true">imdb.com</domain>
+
+        <domain includeSubdomains="true">54.197.210.8</domain>
+        <domain includeSubdomains="true">3.15.200.13</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">live.qureka.com</domain>
+        <domain includeSubdomains="true">425.live.qureka.com</domain>
+        <domain includeSubdomains="true">connectivitycheck.gstatic.com</domain>
+        <domain includeSubdomains="true">admanager.google.com</domain>
+        <domain includeSubdomains="true">askforad.com</domain>
     </domain-config>
 </network-security-config>

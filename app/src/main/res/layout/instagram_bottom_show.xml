@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/all_bg"
     android:layout_gravity="bottom">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/_10sdp"
-        android:layout_marginVertical="@dimen/_60sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
                 android:id="@+id/download_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_15sdp"
                 android:gravity="center"
                 android:fontFamily="@font/poppins_semibold"

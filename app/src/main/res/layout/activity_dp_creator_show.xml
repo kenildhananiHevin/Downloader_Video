@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/all_bg"
-    tools:context=".dpcreator.DpCreatorShowActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"
@@ -45,6 +45,7 @@
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/layout"
         app:layout_constraintTop_toBottomOf="@id/tab_layout">
 
         <RelativeLayout
@@ -64,27 +65,6 @@
                 android:padding="@dimen/_50sdp"
                 android:scaleType="matrix"/>
 
-
-            <!--<com.jsibbold.zoomage.ZoomageView
-                android:id="@+id/select_pic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:zoomage_restrictBounds="false"
-                app:zoomage_animateOnReset="true"
-                app:zoomage_autoResetMode="UNDER"
-                app:zoomage_autoCenter="true"
-                app:zoomage_zoomable="true"
-                app:zoomage_translatable="true"
-                app:zoomage_minScale="0.6"
-                app:zoomage_maxScale="8"
-                android:layout_alignStart="@id/frame_select"
-                android:layout_alignTop="@id/frame_select"
-                android:layout_alignEnd="@id/frame_select"
-                android:layout_alignBottom="@id/frame_select"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:padding="@dimen/_50sdp" />-->
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,10 +80,11 @@
 
             <ImageView
                 android:id="@+id/frame_select"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_250sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
                 android:padding="@dimen/_10sdp"
                 android:src="@drawable/frame_1" />
 
@@ -116,31 +97,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/frame_layout">
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/recycle_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="@dimen/_10sdp">
 
         <TextView
             android:id="@+id/photo_click"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="wrap_content"
             android:background="@drawable/hashtag_item_bg"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/select_photos"
             android:textColor="@color/white"
             android:layout_weight="1"
+            android:minHeight="@dimen/_40sdp"
             android:layout_marginEnd="@dimen/_5sdp"
             android:textSize="@dimen/_15sdp" />
 
         <TextView
             android:id="@+id/save"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="wrap_content"
             android:background="@drawable/save_bg"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/save"
+            android:minHeight="@dimen/_40sdp"
             android:textColor="@color/language_bg"
             android:layout_weight="1"
             android:layout_marginStart="@dimen/_5sdp"
@@ -170,6 +155,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         app:labelBehavior="gone"
         android:valueFrom="0"
+        android:visibility="gone"
         android:valueTo="100"
         android:layout_marginHorizontal="@dimen/_10sdp"
         app:trackHeight="8dp"/>

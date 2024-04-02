@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/all_bg"
-    tools:context=".instagram.FrameActivity">
+    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.frame.FrameActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"

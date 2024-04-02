@@ -23,6 +23,7 @@
     </queries>
 
     <application
+        android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -34,112 +35,110 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Downloader_Video"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.activity.MainActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.InstagramStoryActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.story.InstagramStoryActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.InstaStoryVideoShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.story.InstaStoryVideoShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.InstaStoryImageShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.story.InstaStoryImageShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".setting.SettingActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.setting.SettingActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".howtodownload.HowToDownloadActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.howtodownload.HowToDownloadActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".mydownload.SaveImageShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mydownload.SaveImageShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".language.LanguageActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.language.LanguageActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".dpcreator.OpenGallery"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.OpenGallery"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".dpcreator.DpCreatorShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".webbrowser.WebBrowserShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".webbrowser.WebBrowserActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".dpcreator.DpCreatorActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".hastag.HashtagShowActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.hastag.HashtagShowActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.FrameActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.frame.FrameActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".mydownload.MyDownloadActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mydownload.MyDownloadActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".hastag.HashtagActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.hastag.HashtagActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".facebook.FBLoginActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.FBLoginActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".facebook.FaceBookActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.FaceBookActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.InstagramActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.InstagramActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".instagram.other.InstagramLogin"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.other.InstagramLogin"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".whatsapp.MediaWpStatusActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.whatsapp.MediaWpStatusActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".whatsapp.MediaWpImageViewerActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.whatsapp.MediaWpImageViewerActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".whatsapp.MediaWpVIdeoViewerActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.whatsapp.MediaWpVIdeoViewerActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".activity.VideoDownloaderActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.activity.VideoDownloaderActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.splash.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -149,7 +148,7 @@
         </activity>
 
         <service
-            android:name=".facebook.other.FaceBookService"
+            android:name="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.other.FaceBookService"
             android:enabled="true"
             android:exported="false" />
 
