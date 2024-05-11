@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.howtodownload.InstagramHowToDownloadFragment">
+    tools:context=".fragment.howtodownload.InstagramHowToDownloadFragment">
 
     <ImageView
         android:id="@+id/insta_how_to_image"

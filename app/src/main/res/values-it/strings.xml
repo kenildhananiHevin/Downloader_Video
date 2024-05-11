@@ -138,6 +138,17 @@
     <string name="retry_network">Riprova rete</string>
     <string name="this_action_might_contain_ads">Questa azione potrebbe contenere pubblicità</string>
     <string name="loading_ads">Caricamento degli annunci...</string>
+    <string name="how_to_use">Come Utilizzare?</string>
+    <string name="search_video">Cerca Video</string>
+    <string name="browse_videos_from_your_social_media_n_accounts">Sfoglia i video dai tuoi account sui social media</string>
+    <string name="skip_intro">Salta Introduzione</string>
+    <string name="copy_link">Copia Link</string>
+    <string name="copy_your_social_media_video_link_supported_n_by_our_app">Copia il link del tuo video sui social media supportato dalla nostra app</string>
+    <string name="paste_link_and_download">Incolla il link e scarica</string>
+    <string name="download_video">Scarica Video</string>
+    <string name="paste_url_and_download_video">Incolla URL e scarica video</string>
+    <string name="got_its">Capito!</string>
+
 
 
 </resources>

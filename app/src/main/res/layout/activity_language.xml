@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    android:background="@color/all_bg">
+    android:background="@color/all_bg"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:id="@+id/toolbar"
@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/_10sdp"
-            android:gravity="center_vertical"
             android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
             android:text="@string/select_language"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp" />
@@ -27,19 +27,19 @@
             android:id="@+id/img_done"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/done_bg"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="@string/done"
-            android:singleLine="true"
-            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:background="@drawable/done_bg"
             android:ellipsize="marquee"
             android:fontFamily="@font/poppins_semibold"
-            android:layout_marginStart="@dimen/_13sdp"
             android:gravity="center_horizontal|center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/done"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp"
-            android:layout_marginEnd="@dimen/_13sdp" />
+            android:textSize="@dimen/_13sdp" />
 
     </RelativeLayout>
 
@@ -47,27 +47,27 @@
         android:id="@+id/language_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:overScrollMode="never"
         android:layout_above="@id/native_ad_container"
-        android:visibility="gone"
-        android:layout_below="@id/toolbar"/>
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:overScrollMode="never"
+        android:visibility="gone" />
 
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/language_bg"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/language_bg" />
 
     <include
         android:id="@+id/native_ad_container"
         layout="@layout/ad_layout_native_medium"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_height="@dimen/medium_native_ad_height"
         android:layout_alignParentBottom="true"
-        android:layout_height="@dimen/medium_native_ad_height" />
+        android:layout_marginHorizontal="@dimen/_10sdp" />
 
 
 </RelativeLayout>

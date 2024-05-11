@@ -1,9 +1,6 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mydownload;
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity.SaveVideoPathDirectory;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.other.FaceBookService.mFaceBookVideoPathDirectory;
 import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.ConstMedia.RootDirectoryWhatsappShow;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.mEnstagramVideoPathDirectory;
 
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +15,9 @@ import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.Ba
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.adapter.MyDownloadAdapter;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.my_download.MyDownload;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.other.FaceBookService;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -70,8 +70,8 @@ public class MyDownloadActivity extends BaseActivity {
         fb_listFile.clear();
         dp_listFile.clear();
 
-        if (mEnstagramVideoPathDirectory.listFiles() != null) {
-            for (File file : mEnstagramVideoPathDirectory.listFiles()) {
+        if (CommonClass.mEnstagramVideoPathDirectory.listFiles() != null) {
+            for (File file : CommonClass.mEnstagramVideoPathDirectory.listFiles()) {
                 if (!file.getName().startsWith(".")) {
                     listFile.add(file);
                 }
@@ -86,16 +86,16 @@ public class MyDownloadActivity extends BaseActivity {
             }
         }
 
-        if (mFaceBookVideoPathDirectory.listFiles() != null) {
-            for (File file : mFaceBookVideoPathDirectory.listFiles()) {
+        if (FaceBookService.mFaceBookVideoPathDirectory.listFiles() != null) {
+            for (File file : FaceBookService.mFaceBookVideoPathDirectory.listFiles()) {
                 if (!file.getName().startsWith(".")) {
                     fb_listFile.add(file);
                 }
             }
         }
 
-        if (SaveVideoPathDirectory.listFiles() != null) {
-            for (File file : SaveVideoPathDirectory.listFiles()) {
+        if (DpCreatorShowActivity.SaveVideoPathDirectory.listFiles() != null) {
+            for (File file : DpCreatorShowActivity.SaveVideoPathDirectory.listFiles()) {
                 if (!file.getName().startsWith(".")) {
                     dp_listFile.add(file);
                 }

@@ -53,7 +53,6 @@ public class MyDownloadAdapter extends RecyclerView.Adapter<MyDownloadAdapter.Vi
                     intent.putExtra("from", myDownload.getName());
                     activity.startActivity(intent);
                 }
-
             }
         });
 

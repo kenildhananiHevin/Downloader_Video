@@ -22,7 +22,6 @@ import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.adapter.EditPicAdapter;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.dpimage.MultiTouchListener;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.creator_model.DpCreator;
-import com.google.android.material.slider.Slider;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,9 +40,6 @@ public class DpCreatorShowActivity extends BaseActivity {
     RecyclerView recycle_edit;
     EditPicAdapter editPicAdapter;
     ArrayList<DpCreator> list = new ArrayList<>();
-    private Slider zoomSeekBar;
-    private float scaleFactor = 1f;
-    private float maxScaleFactor = 3f;
     FrameLayout frame_layout;
     public static File SaveVideoPathDirectory = new File(Environment.getExternalStorageDirectory() + "/Download/Video_Downloader/SavedPhotos");
     String images;
@@ -100,7 +96,6 @@ public class DpCreatorShowActivity extends BaseActivity {
         frame_select = findViewById(R.id.frame_select);
         photo_click = findViewById(R.id.photo_click);
         frame_header_text = findViewById(R.id.frame_header_text);
-        zoomSeekBar = findViewById(R.id.seekBar);
         recycle_edit = findViewById(R.id.recycle_edit);
         save = findViewById(R.id.save);
         frame_layout = findViewById(R.id.frame_layout);
@@ -109,7 +104,6 @@ public class DpCreatorShowActivity extends BaseActivity {
 
         Glide.with(activity).load(images).into(select_pic);
 
-//        Glide.with(activity).load(imagess).into(frame_select);
         frame_select.setImageResource(imagess);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -148,50 +142,9 @@ public class DpCreatorShowActivity extends BaseActivity {
             }
         });
 
-        /*zoomSeekBar.addOnChangeListener(new Slider.OnChangeListener() {
-            @Override
-            public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
-                scaleFactor = 1f + (maxScaleFactor - 1f) * value / 100f;
-                updateZoom();
-            }
-        });*/
+
 
         select_pic.setOnTouchListener(new MultiTouchListener());
-
-      /*  select_pic.setOnTouchListener(new View.OnTouchListener() {
-        *//*    private float lastX, lastY;
-            private float dX, dY;
-
-            @SuppressLint("ClickableViewAccessibility")
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        dX = v.getX() - event.getRawX();
-                        dY = v.getY() - event.getRawY();
-                        lastX = v.getX();
-                        lastY = v.getY();
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        float newX = event.getRawX() + dX;
-                        float newY = event.getRawY() + dY;
-                        v.animate().x(newX).y(newY).setDuration(0).start();
-                        lastX = newX;
-                        lastY = newY;
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        if (lastX < 0 || lastY < 0 || lastX + v.getWidth() > select_pic.getWidth() || lastY + v.getHeight() > select_pic.getHeight()) {
-                            float finalX = Math.max(0, Math.min(lastX, select_pic.getWidth() - v.getWidth()));
-                            float finalY = Math.max(0, Math.min(lastY, select_pic.getHeight() - v.getHeight()));
-                            v.animate().x(finalX).y(finalY).start();
-                        }
-                        break;
-                    default:
-                        return false;
-                }
-                return true;
-            }*//*
-        });*/
 
         recycle_edit.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
         editPicAdapter = new EditPicAdapter(activity, list);
@@ -222,35 +175,8 @@ public class DpCreatorShowActivity extends BaseActivity {
                 e.printStackTrace();
             }
         }
-//        scanFile(activity, imageFile.getAbsolutePath());
         return null;
     }
-
-   /* private void updateZoom() {
-        try {
-            int viewWidth = select_pic.getWidth();
-            int viewHeight = select_pic.getHeight();
-            int drawableWidth = select_pic.getDrawable().getIntrinsicWidth();
-            int drawableHeight = select_pic.getDrawable().getIntrinsicHeight();
-
-            float scaleX = (float) viewWidth / (float) drawableWidth;
-            float scaleY = (float) viewHeight / (float) drawableHeight;
-
-            float scale = Math.min(scaleX, scaleY) * scaleFactor;
-
-            float translateX = (viewWidth - (drawableWidth * scale)) / 2f;
-            float translateY = (viewHeight - (drawableHeight * scale)) / 2f;
-
-            Matrix matrix = new Matrix();
-            matrix.setScale(scale, scale);
-            matrix.postTranslate(translateX, translateY);
-            select_pic.setImageMatrix(matrix);
-            select_pic.invalidate();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
-
 
     @Override
     public void onBackPressed() {

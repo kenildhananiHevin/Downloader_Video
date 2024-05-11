@@ -1,10 +1,5 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.facebook;
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.other.FaceBookService.mFaceBookVideoPathDirectory;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.convertBytesToMB;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.formatDuration;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.getVideoDuration;
-
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,6 +17,8 @@ import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
 
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.adapter.FaceBookDownloadedVideoListAdapter;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.DownloadedMediaInfoModel;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.other.FaceBookService;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,8 +69,8 @@ public class FaceBookDownloadFragment extends Fragment{
     public static MutableLiveData<String> mutableLiveDataFb = new MutableLiveData<String>();
 
     private void getAllFiles() throws IOException {
-        if (mFaceBookVideoPathDirectory.listFiles() != null) {
-            for (File file : mFaceBookVideoPathDirectory.listFiles()) {
+        if (FaceBookService.mFaceBookVideoPathDirectory.listFiles() != null) {
+            for (File file : FaceBookService.mFaceBookVideoPathDirectory.listFiles()) {
                 if (!file.getName().startsWith(".")){
                     listFile.add(file);
                 }
@@ -89,15 +86,15 @@ public class FaceBookDownloadFragment extends Fragment{
                     DownloadedMediaInfoModel downloadedMediaInfoModel = new DownloadedMediaInfoModel();
                     downloadedMediaInfoModel.setMediaFile(file);
                     downloadedMediaInfoModel.setMediaName(file.getName());
-                    downloadedMediaInfoModel.setMediaSize(convertBytesToMB(file.length()));
-                    downloadedMediaInfoModel.setMediaDuration(formatDuration(getVideoDuration(file.getAbsolutePath())));
+                    downloadedMediaInfoModel.setMediaSize(CommonClass.convertBytesToMB(file.length()));
+                    downloadedMediaInfoModel.setMediaDuration(CommonClass.formatDuration(CommonClass.getVideoDuration(file.getAbsolutePath())));
                     downloadedMediaInfoModel.setMediaPath(file.getAbsolutePath());
                     downloadedMediaInfoModelList.add(downloadedMediaInfoModel);
                 } else if (file.isFile() && file.getName().endsWith(".jpg")) {
                     DownloadedMediaInfoModel downloadedMediaInfoModel = new DownloadedMediaInfoModel();
                     downloadedMediaInfoModel.setMediaFile(file);
                     downloadedMediaInfoModel.setMediaName(file.getName());
-                    downloadedMediaInfoModel.setMediaSize(convertBytesToMB(file.length()));
+                    downloadedMediaInfoModel.setMediaSize(CommonClass.convertBytesToMB(file.length()));
                     downloadedMediaInfoModel.setMediaPath(file.getAbsolutePath());
                     downloadedMediaInfoModelList.add(downloadedMediaInfoModel);
                 }

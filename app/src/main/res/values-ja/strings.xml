@@ -138,5 +138,16 @@
     <string name="retry_network">ネットワークを再試行する</string>
     <string name="this_action_might_contain_ads">この操作には広告が含まれる可能性があります</string>
     <string name="loading_ads">広告を読み込んでいます...</string>
+    <string name="how_to_use">使い方</string>
+    <string name="search_video">動画を検索</string>
+    <string name="browse_videos_from_your_social_media_n_accounts">ソーシャルメディアアカウントから動画を閲覧</string>
+    <string name="skip_intro">イントロをスキップ</string>
+    <string name="copy_link">リンクをコピー</string>
+    <string name="copy_your_social_media_video_link_supported_n_by_our_app">アプリでサポートされているソーシャルメディア動画リンクをコピー</string>
+    <string name="paste_link_and_download">リンクを貼り付けてダウンロード</string>
+    <string name="download_video">動画をダウンロード</string>
+    <string name="paste_url_and_download_video">URLを貼り付けて動画をダウンロード</string>
+    <string name="got_its">了解しました！</string>
+
 
 </resources>

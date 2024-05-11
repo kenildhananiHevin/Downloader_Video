@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/all_bg"
-    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.instagram.InstagramFragment">
+    tools:context=".fragment.instagram.InstagramFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

@@ -1,8 +1,6 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.whatsapp;
 
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.whatsapp.MediaDownloadFragment.mutableLiveDatas;
-
 import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -278,7 +276,7 @@ public class MediaImageFragment extends Fragment {
                     e.printStackTrace();
                 }
                 iUtilsMedia.scanFile(requireActivity(), storyModel.getFilename());
-                mutableLiveDatas.postValue("");
+                MediaDownloadFragment.mutableLiveDatas.postValue("");
                 Toast.makeText(requireActivity(), R.string.saved, Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -303,7 +301,7 @@ public class MediaImageFragment extends Fragment {
             new File(this.SaveFilePath, substring).renameTo(new File(this.SaveFilePath, substring2));
             MediaWpStatusActivity recentStatusActivity3 = (MediaWpStatusActivity) requireActivity();
             Toast.makeText(recentStatusActivity3, requireActivity().getResources().getString(R.string.saved_to) + this.SaveFilePath + substring2, Toast.LENGTH_SHORT).show();
-            mutableLiveDatas.postValue("");
+            MediaDownloadFragment.mutableLiveDatas.postValue("");
         } else if (i == 1) {
             Intent intent = new Intent(requireActivity(), MediaWpImageViewerActivity.class);
             intent.putExtra("image", storyModel.getUri().toString());
@@ -337,7 +335,7 @@ public class MediaImageFragment extends Fragment {
                 }
                 iUtilsMedia.scanFile(requireActivity(), storyModel.getFilename());
                 Toast.makeText(requireActivity(), R.string.saved, Toast.LENGTH_SHORT).show();
-                mutableLiveDatas.postValue("");
+                MediaDownloadFragment.mutableLiveDatas.postValue("");
                 return;
             }
             createFileFolder();
@@ -363,7 +361,7 @@ public class MediaImageFragment extends Fragment {
             new File(this.SaveFilePath, substring).renameTo(new File(this.SaveFilePath, substring2));
             MediaWpStatusActivity recentStatusActivity3 = (MediaWpStatusActivity) requireActivity();
             Toast.makeText(recentStatusActivity3, requireActivity().getResources().getString(R.string.saved_to) + this.SaveFilePath + substring2, Toast.LENGTH_SHORT).show();
-            mutableLiveDatas.postValue("");
+            MediaDownloadFragment.mutableLiveDatas.postValue("");
         }
     }
 }

@@ -24,8 +24,8 @@ import java.util.Random;
 import plugin.adsdk.service.BaseCallback;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.BaseActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
-import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.activity.MainActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.adapter.LanguageAdapter;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.intro.IntroActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.language_model.Languages;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.utils.LocaleHelper;
 
@@ -94,7 +94,7 @@ public class LanguageActivity extends BaseActivity {
                             editor.putBoolean("language_set", true);
                             editor.apply();
                             if (intent) {
-                                startActivity(new Intent(LanguageActivity.this, MainActivity.class));
+                                startActivity(new Intent(LanguageActivity.this, IntroActivity.class));
                                 finish();
                             } else {
                                 showInterstitial(new BaseCallback() {
@@ -108,8 +108,6 @@ public class LanguageActivity extends BaseActivity {
                 } else {
                     Toast.makeText(LanguageActivity.this, R.string.select_language, Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
 

@@ -19,6 +19,7 @@ import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mo
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserShowActivity;
 
+
 public class WebBrowserAdapter extends RecyclerView.Adapter<WebBrowserAdapter.ViewHolder> {
     WebBrowserActivity activity;
     ArrayList<WebBrowser> list;

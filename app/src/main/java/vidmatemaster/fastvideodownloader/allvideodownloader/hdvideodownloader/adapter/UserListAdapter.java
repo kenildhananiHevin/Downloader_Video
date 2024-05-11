@@ -50,7 +50,6 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
                 UserListAdapter.this.userListInterface.userListClick(position,UserListAdapter.this.trayModelArrayList.get(position));
             }
         });
-
     }
 
     @Override

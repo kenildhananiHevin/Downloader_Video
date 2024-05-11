@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.howtodownload.HowToDownloadActivity">
+    tools:context=".howtodownload.HowToDownloadActivity">
 
     <LinearLayout
         android:id="@+id/tab_layout"

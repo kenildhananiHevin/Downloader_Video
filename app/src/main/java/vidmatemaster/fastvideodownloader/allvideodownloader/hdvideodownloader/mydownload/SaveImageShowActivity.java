@@ -1,6 +1,5 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mydownload;
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity.SaveVideoPathDirectory;
 import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.REQUEST_PERM_DELETE;
 import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.convertBytesToMB;
 import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.formatDuration;
@@ -23,6 +22,7 @@ import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.Ba
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.DownloadedMediaInfoModel;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.dpcreator.DpCreatorShowActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -76,8 +76,8 @@ public class SaveImageShowActivity extends BaseActivity implements SaveImageList
     }
 
     private void getAllFiles() throws IOException {
-        if (SaveVideoPathDirectory.listFiles() != null) {
-            for (File file : SaveVideoPathDirectory.listFiles()) {
+        if (DpCreatorShowActivity.SaveVideoPathDirectory.listFiles() != null) {
+            for (File file : DpCreatorShowActivity.SaveVideoPathDirectory.listFiles()) {
                 if (!file.getName().startsWith(".")) {
                     listFile.add(file);
                 }

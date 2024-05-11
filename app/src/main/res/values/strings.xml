@@ -138,6 +138,15 @@
     <string name="retry_network">Retry network</string>
     <string name="this_action_might_contain_ads">This action might contain ads</string>
     <string name="loading_ads">Loading ads...</string>
-
+    <string name="how_to_use">How to Use?</string>
+    <string name="search_video">Search Video</string>
+    <string name="browse_videos_from_your_social_media_n_accounts">Browse videos from your social media \n accounts</string>
+    <string name="skip_intro">Skip Intro</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="copy_your_social_media_video_link_supported_n_by_our_app">Copy your social media video link supported \n by our app</string>
+    <string name="paste_link_and_download">Paste link and download</string>
+    <string name="download_video">Download Video</string>
+    <string name="paste_url_and_download_video">Paste URL and download video</string>
+    <string name="got_its">Got it!</string>
 
 </resources>

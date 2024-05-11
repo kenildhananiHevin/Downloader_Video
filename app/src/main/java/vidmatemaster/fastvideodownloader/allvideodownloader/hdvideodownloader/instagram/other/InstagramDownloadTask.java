@@ -1,14 +1,13 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.other;
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.instagram.DownloadFragment.mutableLiveData;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.mEnstagramVideoPathDirectory;
-
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.instagram.DownloadFragment;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,7 +31,7 @@ public class InstagramDownloadTask extends AsyncTask<String, Integer, String> {
         try {
             String fileExtension = "";
             String mediaNameLowerCase = mediaName.toLowerCase();
-            File directory = new File(mEnstagramVideoPathDirectory.getAbsolutePath());
+            File directory = new File(CommonClass.mEnstagramVideoPathDirectory.getAbsolutePath());
 
             if (!directory.exists()) {
                 directory.mkdirs();
@@ -76,7 +75,7 @@ public class InstagramDownloadTask extends AsyncTask<String, Integer, String> {
             }
 
 //            String fileExtension = mediaName.endsWith(".jpg") ? "jpg" : "mp4";
-            fileOutputStream = new FileOutputStream(mEnstagramVideoPathDirectory + "/" + System.currentTimeMillis() + "." + fileExtension);
+            fileOutputStream = new FileOutputStream(CommonClass.mEnstagramVideoPathDirectory + "/" + System.currentTimeMillis() + "." + fileExtension);
 
             HttpURLConnection connection = (HttpURLConnection) new URL(strArr[0]).openConnection();
             inputStream = connection.getInputStream();
@@ -141,7 +140,7 @@ public class InstagramDownloadTask extends AsyncTask<String, Integer, String> {
             return;
         }
         showToast(mContext, mContext.getResources().getString(R.string.downloadCompleted));
-        mutableLiveData.postValue("");
+        DownloadFragment.mutableLiveData.postValue("");
     }
 
     private void showToast(Activity activity, String message) {

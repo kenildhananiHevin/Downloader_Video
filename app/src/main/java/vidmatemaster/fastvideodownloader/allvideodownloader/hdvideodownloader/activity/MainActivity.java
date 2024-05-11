@@ -11,7 +11,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,21 +20,24 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.BaseActivity;
+
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.BaseActivity;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.howtodownload.HowToDownloadActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.mydownload.MyDownloadActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.setting.SettingActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.webbrowser.WebBrowserActivity;
+
 
 import java.util.Objects;
 
 
 public class MainActivity extends BaseActivity {
-    LinearLayout video_download_layout, web_layout, my_download_layout;
+    RelativeLayout video_download_layout, web_layout, my_download_layout,how_to_use_layout;
     MainActivity activity;
     String languageCode;
     ImageView setting;
-    TextView download_text, web_text, my_download_text, video_download_text;
+    TextView download_text, web_text, my_download_text, video_download_text,how_to_use_text;
     String[] permissions;
 
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
@@ -44,6 +47,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         nativeAd();
+
         activity = this;
         SharedPreferences preferences = getSharedPreferences("Language", 0);
         languageCode = preferences.getString("language_code", "en");
@@ -52,7 +56,8 @@ public class MainActivity extends BaseActivity {
         web_layout = findViewById(R.id.web_layout);
         my_download_layout = findViewById(R.id.my_download_layout);
         video_download_text = findViewById(R.id.video_download_text);
-
+        how_to_use_layout = findViewById(R.id.how_to_use_layout);
+        how_to_use_text = findViewById(R.id.how_to_use_text);
         setting = findViewById(R.id.setting);
         download_text = findViewById(R.id.download_text);
         web_text = findViewById(R.id.web_text);
@@ -62,6 +67,7 @@ public class MainActivity extends BaseActivity {
         web_text.setSelected(true);
         my_download_text.setSelected(true);
         video_download_text.setSelected(true);
+        how_to_use_text.setSelected(true);
 
         video_download_layout.setOnClickListener(v -> {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
@@ -116,6 +122,13 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 showInterstitial(new Intent(activity, MyDownloadActivity.class));
+            }
+        });
+
+        how_to_use_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInterstitial(new Intent(activity, HowToDownloadActivity.class));
             }
         });
 

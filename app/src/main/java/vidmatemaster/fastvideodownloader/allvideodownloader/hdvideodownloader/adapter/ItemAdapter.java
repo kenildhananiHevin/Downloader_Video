@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
+import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.activity.MoreToolsActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.activity.VideoDownloaderActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.FaceBookActivity;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.InstagramActivity;
@@ -53,6 +54,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                     Intent intent = new Intent(videoDownloaderActivity, MediaWpStatusActivity.class);
                     intent.putExtra("status_type", "wpstatus");
                     videoDownloaderActivity.showInterstitial(intent);
+                } else if (position == 3) {
+                    videoDownloaderActivity.showInterstitial(new Intent(videoDownloaderActivity, MoreToolsActivity.class));
                 }
             }
         });

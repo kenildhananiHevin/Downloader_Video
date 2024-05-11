@@ -23,7 +23,9 @@ import com.google.android.flexbox.FlexboxLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -171,9 +173,17 @@ public class HashtagShowActivity extends BaseActivity {
     }
 
     private void ApiCall(String text) {
+
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
+                .writeTimeout(60, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
 
         ApiService apiService = retrofit.create(ApiService.class);

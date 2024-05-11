@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.R;
+
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.adapter.WebBrowserAdapter;
 import vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.model.web_model.WebBrowser;
 
@@ -24,14 +25,11 @@ public class WebBrowserActivity extends BaseActivity {
     WebBrowserAdapter webBrowserAdapter;
     ArrayList<WebBrowser> list = new ArrayList<>();
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_browser);
 
-        bannerAd();
 
         activity = this;
 

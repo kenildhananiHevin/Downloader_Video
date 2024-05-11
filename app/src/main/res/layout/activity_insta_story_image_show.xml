@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/all_bg"
 
-    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.instagram.story.InstaStoryImageShowActivity">
+    tools:context=".instagram.story.InstaStoryImageShowActivity">
 
     <RelativeLayout
         android:id="@+id/tab_layout"

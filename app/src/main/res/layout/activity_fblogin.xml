@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.facebook.FBLoginActivity">
+    tools:context=".facebook.FBLoginActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresh"

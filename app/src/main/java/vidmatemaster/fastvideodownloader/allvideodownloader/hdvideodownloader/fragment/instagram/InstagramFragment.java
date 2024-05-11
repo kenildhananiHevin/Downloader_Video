@@ -1,11 +1,5 @@
 package vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.fragment.instagram;
 
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.mEnstagramVideoPathDirectory;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.CommonClass.showToast;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.SharedPre.ISINSTALOGIN;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.SharedPre.SESSIONID;
-import static vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader.other.SharedPre.USERID;
-
 import android.app.AlertDialog;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -310,21 +304,21 @@ public class InstagramFragment extends Fragment {
 
     private void DownloadInstaVideo(String obj) {
         if (obj.equals("")) {
-            showToast(requireActivity(), getResources().getString(R.string.enter_url));
+            CommonClass.showToast(requireActivity(), getResources().getString(R.string.enter_url));
         } else if (!Patterns.WEB_URL.matcher(obj).matches()) {
-            showToast(requireActivity(), getResources().getString(R.string.enter_valid_url));
+            CommonClass.showToast(requireActivity(), getResources().getString(R.string.enter_valid_url));
         } else {
-            if (SharedPre.sharedGetBoolean(requireActivity(), ISINSTALOGIN)) {
+            if (SharedPre.sharedGetBoolean(requireActivity(), SharedPre.ISINSTALOGIN)) {
                 try {
-                    if (!mEnstagramVideoPathDirectory.exists()) {
-                        mEnstagramVideoPathDirectory.mkdirs();
+                    if (!CommonClass.mEnstagramVideoPathDirectory.exists()) {
+                        CommonClass.mEnstagramVideoPathDirectory.mkdirs();
                     }
                     if (new URL(instagram_text.getText().toString()).getHost().equals("www.instagram.com")) {
                         tempUrl = instagram_text.getText().toString();
                         String str2 = getUrlWithoutParameters(tempUrl) + "?__a=1&__d=dis";
-                        CallInstaApi.callResult(getEnstaUserName, str2, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), USERID) + "; sessionid=" + SharedPre.sharedGetString(requireActivity(), SESSIONID));
+                        CallInstaApi.callResult(getEnstaUserName, str2, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), SharedPre.USERID) + "; sessionid=" + SharedPre.sharedGetString(requireActivity(), SharedPre.SESSIONID));
                     } else {
-                        showToast(requireActivity(), getString(R.string.enter_valid_url));
+                        CommonClass.showToast(requireActivity(), getString(R.string.enter_valid_url));
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -375,14 +369,14 @@ public class InstagramFragment extends Fragment {
                                 list.add(instagramDetailModel2);
                             }
                         } else {
-                            showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
+                            CommonClass.showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
                         }
                     }
                     i2 = i + 1;
                 }
                 /*dialogInstagramDownload(userNametemp, list.get(0).url);*/
                 if (list.size() == 0) {
-                    showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
+                    CommonClass.showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
                 }
                 bottomSheetDialog = new BottomSheetDialog(requireActivity(), R.style.BottomSheetDialog);
                 bottomSheetDialog.setContentView(R.layout.instagram_bottom_show);
@@ -433,7 +427,7 @@ public class InstagramFragment extends Fragment {
                 e.printStackTrace();
                 String str2 = getUrlWithoutParameters(tempUrl) + "?__a=1&__d=dis";
                 try {
-                    CallInstaApi.callResult(instaObserver, str2, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), USERID) + "; " + "sessionid=" + SharedPre.sharedGetString(requireActivity(), SESSIONID));
+                    CallInstaApi.callResult(instaObserver, str2, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), SharedPre.USERID) + "; " + "sessionid=" + SharedPre.sharedGetString(requireActivity(), SharedPre.SESSIONID));
                 } catch (Exception e2) {
                     e2.printStackTrace();
                 }
@@ -445,9 +439,9 @@ public class InstagramFragment extends Fragment {
             th.printStackTrace();
             String str = getUrlWithoutParameters(tempUrl) + "?__a=1&__d=dis";
             try {
-                CallInstaApi.callResult(instaObserver, str, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), USERID) + "; " + "sessionid=" + SharedPre.sharedGetString(requireActivity(), SESSIONID));
+                CallInstaApi.callResult(instaObserver, str, "ds_user_id=" + SharedPre.sharedGetString(requireActivity(), SharedPre.USERID) + "; " + "sessionid=" + SharedPre.sharedGetString(requireActivity(), SharedPre.SESSIONID));
             } catch (Exception e) {
-                showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
+                CommonClass.showToast(requireActivity(), getResources().getString(R.string.somethingWentWrong));
             }
         }
 
@@ -520,13 +514,13 @@ public class InstagramFragment extends Fragment {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                showToast(requireActivity(), getResources().getString(R.string.logout_instagram));
+                CommonClass.showToast(requireActivity(), getResources().getString(R.string.logout_instagram));
             }
         }
 
         @Override
         public void onError(Throwable th) {
-            showToast(requireActivity(), getResources().getString(R.string.logout_instagram));
+            CommonClass.showToast(requireActivity(), getResources().getString(R.string.logout_instagram));
         }
 
         @Override
@@ -559,7 +553,7 @@ public class InstagramFragment extends Fragment {
             URI uri = new URI(str);
             return new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null, uri.getFragment()).toString();
         } catch (Exception e) {
-            showToast(requireActivity(), getResources().getString(R.string.enter_valid_url));
+            CommonClass.showToast(requireActivity(), getResources().getString(R.string.enter_valid_url));
             return null;
         }
     }
