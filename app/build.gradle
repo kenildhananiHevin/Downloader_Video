@@ -3,7 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
     id 'io.michaelrocks.paranoid'
+    id 'com.google.firebase.firebase-perf'
 }
 
 android {
@@ -14,8 +17,8 @@ android {
         applicationId "vidmatemaster.fastvideodownloader.allvideodownloader.hdvideodownloader"
         minSdk 24
         targetSdk 33
-        versionCode 4
-        versionName "4.0"
+        versionCode 6
+        versionName "6.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
