@@ -2,9 +2,9 @@
     <string name="app_name">Video Downloader</string>
     <string name="all_video_downloader">Alle Video Downloader</string>
     <string name="video_downloader">Video \nDownloader</string>
-    <string name="instagram">Enstagram</string>
-    <string name="facebook">Fesbuk</string>
-    <string name="whatsapp">Whatsup</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="whatsapp">Whatsapp</string>
     <string name="twitter">Twitter</string>
     <string name="whatsapp_status">WhatsApp Status</string>
     <string name="allow_permission">Berechtigung zulassen</string>
