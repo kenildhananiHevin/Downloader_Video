@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/splash_bg"/>
+        android:background="@drawable/splash_bg" />
 
     <ImageView
         android:id="@+id/logo_image"
@@ -47,26 +47,26 @@
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:adjustViewBounds="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_35sdp"
-        app:lottie_rawRes="@raw/alldataloder"
+        android:adjustViewBounds="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/alldataloder" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/this_action_might_contain_ads"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_medium"
-        app:layout_constraintTop_toBottomOf="@id/animation_view"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_13sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="@dimen/_13sdp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animation_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
